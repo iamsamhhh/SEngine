@@ -6,3 +6,11 @@
 //
 
 #include "EntryPoint.hpp"
+extern SEngine::Application* SEngine::CreatApplication();
+int main(){
+    auto app = SEngine::CreatApplication();
+    app->Run();
+    delete app;
+    
+    return 0;
+}

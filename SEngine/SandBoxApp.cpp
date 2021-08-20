@@ -6,3 +6,19 @@
 //
 
 #include "SandBoxApp.hpp"
+
+class SandBox: public SEngine::Application{
+public:
+    SandBox()
+    {
+        printf("Hello SEngine!\n");
+    }
+    ~SandBox()
+    {
+        printf("bye SEngine!\n");
+    }
+};
+
+SEngine::Application* SEngine::CreatApplication(){
+    return new SandBox();
+}

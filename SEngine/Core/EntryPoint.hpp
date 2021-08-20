@@ -8,6 +8,8 @@
 #ifndef EntryPoint_hpp
 #define EntryPoint_hpp
 
-#include <stdio.h>
+#include "Application.hpp"
+
+
 
 #endif /* EntryPoint_hpp */

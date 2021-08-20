@@ -6,3 +6,14 @@
 //
 
 #include "Application.hpp"
+namespace SEngine {
+void Application::Run(){
+    
+}
+Application::Application(){
+    
+}
+Application::~Application(){
+    
+}
+}

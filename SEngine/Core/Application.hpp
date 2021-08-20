@@ -8,6 +8,14 @@
 #ifndef Application_hpp
 #define Application_hpp
 
-#include <stdio.h>
+namespace SEngine{
+class Application{
+public:
+    Application();
+    virtual ~Application();
+    void Run();
+};
 
+Application* CreatApplication();
+}
 #endif /* Application_hpp */

@@ -8,5 +8,6 @@
 #ifndef SEngine_h
 #define SEngine_h
 
+#include "Application.hpp"
 
 #endif /* SEngine_h */

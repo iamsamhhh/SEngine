@@ -9,5 +9,6 @@
 #define SandBoxApp_hpp
 
 #include <stdio.h>
+#include "SEngine.h"
 
 #endif /* SandBoxApp_hpp */
