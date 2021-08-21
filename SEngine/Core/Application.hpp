@@ -8,6 +8,8 @@
 #ifndef Application_hpp
 #define Application_hpp
 
+#include "Core.h"
+
 namespace SEngine{
 class Application{
 public:

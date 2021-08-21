@@ -7,17 +7,14 @@
 
 #include "SandBoxApp.hpp"
 
-class SandBox: public SEngine::Application{
-public:
-    SandBox()
-    {
-        printf("Hello SEngine!\n");
-    }
-    ~SandBox()
-    {
-        printf("bye SEngine!\n");
-    }
-};
+SandBox::SandBox(){
+    SandBox::logger = new SEngine::Log("SandBox");
+    logger->GetLogger()->warn("succedeed");
+}
+SandBox::~SandBox()
+{
+    
+}
 
 SEngine::Application* SEngine::CreatApplication(){
     return new SandBox();

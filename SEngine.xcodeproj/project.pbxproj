@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4910DDB26CFEE0B00A691AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DDA26CFEE0B00A691AE /* main.cpp */; };
+		A4910DE426CFEE5300A691AE /* EntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE226CFEE5300A691AE /* EntryPoint.cpp */; };
+		A4910DE726CFEEBF00A691AE /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE526CFEEBF00A691AE /* Application.cpp */; };
+		A4910E0026CFF5AA00A691AE /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */; };
+		A4910E0326D0058B00A691AE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910E0126D0058B00A691AE /* Log.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,16 @@
 
 /* Begin PBXFileReference section */
 		A4910DD726CFEE0B00A691AE /* SEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SEngine; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4910DDA26CFEE0B00A691AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A4910DE226CFEE5300A691AE /* EntryPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint.cpp; sourceTree = "<group>"; };
+		A4910DE326CFEE5300A691AE /* EntryPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntryPoint.hpp; sourceTree = "<group>"; };
+		A4910DE526CFEEBF00A691AE /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		A4910DE626CFEEBF00A691AE /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		A4910DFB26CFF35F00A691AE /* SEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEngine.h; sourceTree = "<group>"; };
+		A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SandBoxApp.cpp; path = SEngine/SandBoxApp.cpp; sourceTree = SOURCE_ROOT; };
+		A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SandBoxApp.hpp; path = SEngine/SandBoxApp.hpp; sourceTree = SOURCE_ROOT; };
+		A4910E0126D0058B00A691AE /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		A4910E0226D0058B00A691AE /* Log.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Log.hpp; sourceTree = "<group>"; };
+		A4910E0426D0082800A691AE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,7 @@
 		A4910DCE26CFEE0B00A691AE = {
 			isa = PBXGroup;
 			children = (
+				A4910DFC26CFF57700A691AE /* Game */,
 				A4910DD926CFEE0B00A691AE /* SEngine */,
 				A4910DD826CFEE0B00A691AE /* Products */,
 			);
@@ -57,9 +70,41 @@
 		A4910DD926CFEE0B00A691AE /* SEngine */ = {
 			isa = PBXGroup;
 			children = (
-				A4910DDA26CFEE0B00A691AE /* main.cpp */,
+				A4910DE126CFEE3B00A691AE /* Core */,
+				A4910DFB26CFF35F00A691AE /* SEngine.h */,
+				A4910E0126D0058B00A691AE /* Log.cpp */,
+				A4910E0226D0058B00A691AE /* Log.hpp */,
 			);
 			path = SEngine;
+			sourceTree = "<group>";
+		};
+		A4910DE126CFEE3B00A691AE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A4910DE226CFEE5300A691AE /* EntryPoint.cpp */,
+				A4910DE326CFEE5300A691AE /* EntryPoint.hpp */,
+				A4910DE526CFEEBF00A691AE /* Application.cpp */,
+				A4910DE626CFEEBF00A691AE /* Application.hpp */,
+				A4910E0426D0082800A691AE /* Core.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A4910DFC26CFF57700A691AE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A4910DFD26CFF58A00A691AE /* SandBox */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A4910DFD26CFF58A00A691AE /* SandBox */ = {
+			isa = PBXGroup;
+			children = (
+				A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */,
+				A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */,
+			);
+			path = SandBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4910DDB26CFEE0B00A691AE /* main.cpp in Sources */,
+				A4910E0026CFF5AA00A691AE /* SandBoxApp.cpp in Sources */,
+				A4910DE726CFEEBF00A691AE /* Application.cpp in Sources */,
+				A4910E0326D0058B00A691AE /* Log.cpp in Sources */,
+				A4910DE426CFEE5300A691AE /* EntryPoint.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +290,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J3D5G44F2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ThirdParty/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -252,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J3D5G44F2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ThirdParty/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

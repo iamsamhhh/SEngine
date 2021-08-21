@@ -6,11 +6,16 @@
 //
 
 #include "EntryPoint.hpp"
-extern SEngine::Application* SEngine::CreatApplication();
+
+extern SEngine::Application* CreatApplication();
+
 int main(){
+    SEngine::Log* coreLog = new SEngine::Log("SEngine");
+    coreLog->GetLogger()->info("Hello!");
     auto app = SEngine::CreatApplication();
     app->Run();
     delete app;
     
     return 0;
 }
+

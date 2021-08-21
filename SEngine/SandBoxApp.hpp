@@ -8,7 +8,17 @@
 #ifndef SandBoxApp_hpp
 #define SandBoxApp_hpp
 
-#include <stdio.h>
 #include "SEngine.h"
+
+class SandBox: public SEngine::Application{
+public:
+    SandBox();
+    virtual ~SandBox();
+private:
+    SEngine::Log* logger;
+};
+
+SEngine::Application* SEngine::CreatApplication();
+
 
 #endif /* SandBoxApp_hpp */
