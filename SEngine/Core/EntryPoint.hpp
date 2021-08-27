@@ -13,5 +13,4 @@
 #include "Application.hpp"
 #include "Core.h"
 
-
 #endif /* EntryPoint_hpp */

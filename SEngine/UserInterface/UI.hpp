@@ -16,13 +16,16 @@ namespace SEngine{
 class UI{
 public:
     UI(GLFWwindow* window);
-    void FrameStart(const char* name);
+    void FrameStart();
     void Text(const char* text, ...);
     void Button(const char* lable);
+    void Begin(const char* name);
+    void End();
     void FrameEnd();
 private:
     GLFWwindow* m_window;
     static bool initialized;
+    
 };
 
 }

@@ -6,6 +6,7 @@
 //
 
 #include "UI.hpp"
+#include <stdio.h>
 namespace SEngine{
 bool UI::initialized = false;
 void UI::Text(const char *text, ...){
@@ -23,27 +24,34 @@ void UI::Button(const char *lable){
 
 
 UI::UI(GLFWwindow* window){
-    
     ImGui::CreateContext(NULL);
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    
     UI::m_window = window;
     if (!initialized) {
         IMGUI_CHECKVERSION();
+        ImGuiIO& io = ImGui::GetIO(); (void)io;
         ImGui::StyleColorsDark();
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 330");
         initialized = true;
+        printf("UI init\n");
     }
+    
 }
-void UI::FrameStart(const char* name){
+void UI::FrameStart(){
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
-    ImGui::Begin(name);
     
 }
-void UI::FrameEnd(){
+void UI::Begin(const char* name){
+    ImGui::Begin(name);
+}
+void UI::End(){
     ImGui::End();
+}
+void UI::FrameEnd(){
+    
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }

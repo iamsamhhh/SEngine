@@ -11,7 +11,7 @@
 #include "Core.h"
 #include "EntryPoint.hpp"
 #include <GLFW/glfw3.h>
-
+#include "UI.hpp"
 
 namespace SEngine{
 
@@ -27,13 +27,25 @@ public:
     
     
     void SetToCurrent();
+    void SetUpUI();
+    void Begin(const char* name);
+    void End();
+    void FrameStart();
+    void Text(const char* text, ...);
+    void Button(const char* lable);
+    void FrameEnd();
+    
+    
+    UI* GetUI(){
+        return ui;
+    }
     GLFWwindow* GetWindow(){
         return ID;
     }
 private:
     GLFWwindow* ID;
+    UI* ui;
     static bool init;
-    
 };
 
 }

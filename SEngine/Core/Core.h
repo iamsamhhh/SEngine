@@ -12,6 +12,5 @@
 
 #include "Logger.hpp"
 #include "Window.hpp"
-#include "UI.hpp"
 
 #endif /* Core_h */
