@@ -8,12 +8,14 @@
 #include "SandBoxApp.hpp"
 
 SandBox::SandBox(){
-    SandBox::logger = new SEngine::Log("SandBox");
-    logger->GetLogger()->warn("succedeed");
+    SandBox::logger = new SEngine::Logger("SandBox");
+    logger->GetLogger()->info("app initialized");
+    scrHeight = 800;
+    scrWidth = 1300;
 }
 SandBox::~SandBox()
 {
-    
+    logger->GetLogger()->info("bye");
 }
 
 SEngine::Application* SEngine::CreatApplication(){

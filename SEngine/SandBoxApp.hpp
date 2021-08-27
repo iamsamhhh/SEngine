@@ -15,7 +15,7 @@ public:
     SandBox();
     virtual ~SandBox();
 private:
-    SEngine::Log* logger;
+    SEngine::Logger* logger;
 };
 
 SEngine::Application* SEngine::CreatApplication();

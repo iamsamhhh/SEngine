@@ -9,6 +9,7 @@
 #define EntryPoint_hpp
 
 
+#include <glad/glad.h>
 #include "Application.hpp"
 #include "Core.h"
 

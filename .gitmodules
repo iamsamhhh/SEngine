@@ -1,3 +1,6 @@
-[submodule "SEngine/ThirdParty"]
-	path = SEngine/ThirdParty
+[submodule "ThirdParty/spdlog"]
+	path = ThirdParty/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "ThirdParty/imgui"]
+	path = ThirdParty/imgui
+	url = https://github.com/ocornut/imgui

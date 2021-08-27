@@ -8,7 +8,6 @@
 #ifndef Application_hpp
 #define Application_hpp
 
-#include "Core.h"
 
 namespace SEngine{
 class Application{
@@ -16,6 +15,7 @@ public:
     Application();
     virtual ~Application();
     void Run();
+    unsigned int scrWidth = 800, scrHeight = 720;
 };
 
 Application* CreatApplication();

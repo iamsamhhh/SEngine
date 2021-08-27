@@ -7,10 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4910DE426CFEE5300A691AE /* EntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE226CFEE5300A691AE /* EntryPoint.cpp */; };
-		A4910DE726CFEEBF00A691AE /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE526CFEEBF00A691AE /* Application.cpp */; };
-		A4910E0026CFF5AA00A691AE /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */; };
-		A4910E0326D0058B00A691AE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910E0126D0058B00A691AE /* Log.cpp */; };
+		8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */; };
+		8CDFDBCF26D93BD200C610B2 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */; };
+		8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */; };
+		8CDFDBD326D93C4500C610B2 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD226D93C4500C610B2 /* imgui_draw.cpp */; };
+		8CDFDBD526D93C6B00C610B2 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD426D93C6B00C610B2 /* imgui_tables.cpp */; };
+		8CDFDBD726D93C8B00C610B2 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */; };
+		8CDFDBDA26D95B2C00C610B2 /* Render2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */; };
+		A404A99726D28FE700A849C0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A404A99626D28FE700A849C0 /* IOKit.framework */; };
+		A462A71826D2606A005574F0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71726D2606A005574F0 /* CoreVideo.framework */; };
+		A462A71A26D2606F005574F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71926D2606F005574F0 /* Cocoa.framework */; };
+		A462A71C26D26090005574F0 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71B26D26090005574F0 /* libglfw3.a */; };
+		A49C100026D3CC4D00DAB7D2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C0FFF26D3CC4D00DAB7D2 /* OpenGL.framework */; };
+		A49C100226D3CC5600DAB7D2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C100126D3CC5600DAB7D2 /* GLUT.framework */; };
+		A49C102B26D3D0D200DAB7D2 /* EntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE226CFEE5300A691AE /* EntryPoint.cpp */; };
+		A49C102D26D3D15500DAB7D2 /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */; };
+		A49C102E26D3D15500DAB7D2 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE526CFEEBF00A691AE /* Application.cpp */; };
+		A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A49C0FF426D3BC0D00DAB7D2 /* UI.cpp */; };
+		A49C103026D3D15500DAB7D2 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A404A99326D28FA300A849C0 /* Window.cpp */; };
+		A49C103126D3D15500DAB7D2 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910E0126D0058B00A691AE /* Logger.cpp */; };
+		A49C103226D3D15F00DAB7D2 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = A49C100526D3CE3E00DAB7D2 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +42,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = ThirdParty/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = ThirdParty/imgui/backends/imgui_impl_opengl3.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = ThirdParty/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBD226D93C4500C610B2 /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_draw.cpp; path = ThirdParty/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBD426D93C6B00C610B2 /* imgui_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_tables.cpp; path = ThirdParty/imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = ThirdParty/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Render2D.cpp; sourceTree = "<group>"; };
+		8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Render2D.hpp; sourceTree = "<group>"; };
+		A404A99326D28FA300A849C0 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		A404A99426D28FA300A849C0 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		A404A99626D28FE700A849C0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A462A71726D2606A005574F0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A462A71926D2606F005574F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A462A71B26D26090005574F0 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		A4910DD726CFEE0B00A691AE /* SEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4910DE226CFEE5300A691AE /* EntryPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint.cpp; sourceTree = "<group>"; };
 		A4910DE326CFEE5300A691AE /* EntryPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntryPoint.hpp; sourceTree = "<group>"; };
@@ -34,9 +64,14 @@
 		A4910DFB26CFF35F00A691AE /* SEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEngine.h; sourceTree = "<group>"; };
 		A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SandBoxApp.cpp; path = SEngine/SandBoxApp.cpp; sourceTree = SOURCE_ROOT; };
 		A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SandBoxApp.hpp; path = SEngine/SandBoxApp.hpp; sourceTree = SOURCE_ROOT; };
-		A4910E0126D0058B00A691AE /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
-		A4910E0226D0058B00A691AE /* Log.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Log.hpp; sourceTree = "<group>"; };
+		A4910E0126D0058B00A691AE /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		A4910E0226D0058B00A691AE /* Logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
 		A4910E0426D0082800A691AE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		A49C0FF426D3BC0D00DAB7D2 /* UI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UI.cpp; sourceTree = "<group>"; };
+		A49C0FF526D3BC0D00DAB7D2 /* UI.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UI.hpp; sourceTree = "<group>"; };
+		A49C0FFF26D3CC4D00DAB7D2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		A49C100126D3CC5600DAB7D2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		A49C100526D3CE3E00DAB7D2 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,18 +79,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49C100026D3CC4D00DAB7D2 /* OpenGL.framework in Frameworks */,
+				A49C100226D3CC5600DAB7D2 /* GLUT.framework in Frameworks */,
+				A404A99726D28FE700A849C0 /* IOKit.framework in Frameworks */,
+				A462A71A26D2606F005574F0 /* Cocoa.framework in Frameworks */,
+				A462A71826D2606A005574F0 /* CoreVideo.framework in Frameworks */,
+				A462A71C26D26090005574F0 /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CDFDBCB26D93B9B00C610B2 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */,
+				8CDFDBD426D93C6B00C610B2 /* imgui_tables.cpp */,
+				8CDFDBD226D93C4500C610B2 /* imgui_draw.cpp */,
+				8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */,
+				8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */,
+				8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */,
+			);
+			path = imgui;
+			sourceTree = "<group>";
+		};
+		A404A99826D29E9000A849C0 /* Render2D */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */,
+				8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */,
+			);
+			path = Render2D;
+			sourceTree = "<group>";
+		};
+		A462A71626D26069005574F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A462A71B26D26090005574F0 /* libglfw3.a */,
+				A49C0FFF26D3CC4D00DAB7D2 /* OpenGL.framework */,
+				A404A99626D28FE700A849C0 /* IOKit.framework */,
+				A49C100126D3CC5600DAB7D2 /* GLUT.framework */,
+				A462A71726D2606A005574F0 /* CoreVideo.framework */,
+				A462A71926D2606F005574F0 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A462A71F26D26579005574F0 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				A4910E0126D0058B00A691AE /* Logger.cpp */,
+				A4910E0226D0058B00A691AE /* Logger.hpp */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		A4910DCE26CFEE0B00A691AE = {
 			isa = PBXGroup;
 			children = (
 				A4910DFC26CFF57700A691AE /* Game */,
+				A49C100526D3CE3E00DAB7D2 /* glad.c */,
 				A4910DD926CFEE0B00A691AE /* SEngine */,
 				A4910DD826CFEE0B00A691AE /* Products */,
+				A462A71626D26069005574F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				A4910DE126CFEE3B00A691AE /* Core */,
+				A49C0FF326D3BBE400DAB7D2 /* UserInterface */,
+				A404A99826D29E9000A849C0 /* Render2D */,
+				A462A71F26D26579005574F0 /* Debug */,
 				A4910DFB26CFF35F00A691AE /* SEngine.h */,
-				A4910E0126D0058B00A691AE /* Log.cpp */,
-				A4910E0226D0058B00A691AE /* Log.hpp */,
 			);
 			path = SEngine;
 			sourceTree = "<group>";
@@ -81,6 +169,8 @@
 		A4910DE126CFEE3B00A691AE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A404A99326D28FA300A849C0 /* Window.cpp */,
+				A404A99426D28FA300A849C0 /* Window.hpp */,
 				A4910DE226CFEE5300A691AE /* EntryPoint.cpp */,
 				A4910DE326CFEE5300A691AE /* EntryPoint.hpp */,
 				A4910DE526CFEEBF00A691AE /* Application.cpp */,
@@ -105,6 +195,16 @@
 				A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */,
 			);
 			path = SandBox;
+			sourceTree = "<group>";
+		};
+		A49C0FF326D3BBE400DAB7D2 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFDBCB26D93B9B00C610B2 /* imgui */,
+				A49C0FF426D3BC0D00DAB7D2 /* UI.cpp */,
+				A49C0FF526D3BC0D00DAB7D2 /* UI.hpp */,
+			);
+			path = UserInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,10 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4910E0026CFF5AA00A691AE /* SandBoxApp.cpp in Sources */,
-				A4910DE726CFEEBF00A691AE /* Application.cpp in Sources */,
-				A4910E0326D0058B00A691AE /* Log.cpp in Sources */,
-				A4910DE426CFEE5300A691AE /* EntryPoint.cpp in Sources */,
+				A49C103226D3D15F00DAB7D2 /* glad.c in Sources */,
+				A49C102D26D3D15500DAB7D2 /* SandBoxApp.cpp in Sources */,
+				A49C102E26D3D15500DAB7D2 /* Application.cpp in Sources */,
+				8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */,
+				A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */,
+				A49C103026D3D15500DAB7D2 /* Window.cpp in Sources */,
+				8CDFDBD326D93C4500C610B2 /* imgui_draw.cpp in Sources */,
+				8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */,
+				8CDFDBD726D93C8B00C610B2 /* imgui_widgets.cpp in Sources */,
+				A49C103126D3D15500DAB7D2 /* Logger.cpp in Sources */,
+				8CDFDBCF26D93BD200C610B2 /* imgui_impl_opengl3.cpp in Sources */,
+				8CDFDBDA26D95B2C00C610B2 /* Render2D.cpp in Sources */,
+				8CDFDBD526D93C6B00C610B2 /* imgui_tables.cpp in Sources */,
+				A49C102B26D3D0D200DAB7D2 /* EntryPoint.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +397,19 @@
 		A4910DDF26CFEE0B00A691AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J3D5G44F2;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ThirdParty/include";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"$(SRCROOT)/ThirdParty/imgui\"",
+					"\"$(SRCROOT)/ThirdParty/spdlog/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"\"$(SRCROOT)/ThirdParty/imgui\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -298,10 +417,19 @@
 		A4910DE026CFEE0B00A691AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J3D5G44F2;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/ThirdParty/include";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"$(SRCROOT)/ThirdParty/imgui\"",
+					"\"$(SRCROOT)/ThirdParty/spdlog/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"\"$(SRCROOT)/ThirdParty/imgui\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

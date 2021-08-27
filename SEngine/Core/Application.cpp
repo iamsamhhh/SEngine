@@ -6,6 +6,7 @@
 //
 
 #include "Application.hpp"
+extern SEngine::Application* CreatApplication();
 namespace SEngine {
 void Application::Run(){
     
@@ -16,4 +17,5 @@ Application::Application(){
 Application::~Application(){
     
 }
+
 }

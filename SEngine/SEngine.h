@@ -10,8 +10,6 @@
 
 #include "Application.hpp"
 
-#include "EntryPoint.hpp"
-
-#include "Log.hpp"
+#include "Logger.hpp"
 
 #endif /* SEngine_h */

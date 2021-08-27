@@ -5,8 +5,8 @@
 //  Created by henry on 2021/8/20.
 //
 
-#ifndef Log_hpp
-#define Log_hpp
+#ifndef Logger_hpp
+#define Logger_hpp
 
 #include <stdio.h>
 #include <string.h>
@@ -14,10 +14,10 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace SEngine {
-class Log{
+class Logger{
 public:
-    Log(std::string name);
-    virtual ~Log();
+    Logger(std::string name);
+    virtual ~Logger();
     std::shared_ptr<spdlog::logger>& GetLogger();
     
 private:
@@ -25,4 +25,4 @@ private:
 };
 }
 
-#endif /* Log_hpp */
+#endif /* Logger_hpp */

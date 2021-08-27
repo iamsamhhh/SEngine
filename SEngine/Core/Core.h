@@ -9,6 +9,9 @@
 #define Core_h
 
 #include <stdio.h>
-#include "Log.hpp"
+
+#include "Logger.hpp"
+#include "Window.hpp"
+#include "UI.hpp"
 
 #endif /* Core_h */
