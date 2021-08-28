@@ -17,9 +17,9 @@ unsigned int indices[] = {
     0, 2, 1
 };
 float quadVertices[] = {
-    -0.5f, -0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
      0.5f,  0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f,
     -0.5f,  0.5f, 0.0f
 };
 int main(){

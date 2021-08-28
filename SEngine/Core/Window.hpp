@@ -32,7 +32,8 @@ public:
         if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
             return false;
         }
-        
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_BACK);
         return true;
     }
     
