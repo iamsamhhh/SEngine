@@ -14,6 +14,7 @@
 		8CDFDBD526D93C6B00C610B2 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD426D93C6B00C610B2 /* imgui_tables.cpp */; };
 		8CDFDBD726D93C8B00C610B2 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */; };
 		8CDFDBDA26D95B2C00C610B2 /* Render2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */; };
+		91DEC27626D9E7F400699F22 /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91DEC27526D9E7F400699F22 /* SandBoxApp.cpp */; };
 		A404A99726D28FE700A849C0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A404A99626D28FE700A849C0 /* IOKit.framework */; };
 		A462A71826D2606A005574F0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71726D2606A005574F0 /* CoreVideo.framework */; };
 		A462A71A26D2606F005574F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71926D2606F005574F0 /* Cocoa.framework */; };
@@ -21,7 +22,6 @@
 		A49C100026D3CC4D00DAB7D2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C0FFF26D3CC4D00DAB7D2 /* OpenGL.framework */; };
 		A49C100226D3CC5600DAB7D2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C100126D3CC5600DAB7D2 /* GLUT.framework */; };
 		A49C102B26D3D0D200DAB7D2 /* EntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE226CFEE5300A691AE /* EntryPoint.cpp */; };
-		A49C102D26D3D15500DAB7D2 /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */; };
 		A49C102E26D3D15500DAB7D2 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4910DE526CFEEBF00A691AE /* Application.cpp */; };
 		A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A49C0FF426D3BC0D00DAB7D2 /* UI.cpp */; };
 		A49C103026D3D15500DAB7D2 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A404A99326D28FA300A849C0 /* Window.cpp */; };
@@ -55,6 +55,8 @@
 		91DEC23926D9BE0200699F22 /* OneColor.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = OneColor.vs; sourceTree = "<group>"; };
 		91DEC23A26D9BE0200699F22 /* OneColor.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = OneColor.fs; sourceTree = "<group>"; };
 		91DEC23B26D9BE0200699F22 /* Texture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Texture.vs; sourceTree = "<group>"; };
+		91DEC27426D9E7F400699F22 /* SandBoxApp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SandBoxApp.hpp; sourceTree = "<group>"; };
+		91DEC27526D9E7F400699F22 /* SandBoxApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SandBoxApp.cpp; sourceTree = "<group>"; };
 		A404A99326D28FA300A849C0 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		A404A99426D28FA300A849C0 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		A404A99626D28FE700A849C0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -67,8 +69,6 @@
 		A4910DE526CFEEBF00A691AE /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		A4910DE626CFEEBF00A691AE /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		A4910DFB26CFF35F00A691AE /* SEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEngine.h; sourceTree = "<group>"; };
-		A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SandBoxApp.cpp; path = SEngine/SandBoxApp.cpp; sourceTree = SOURCE_ROOT; };
-		A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SandBoxApp.hpp; path = SEngine/SandBoxApp.hpp; sourceTree = SOURCE_ROOT; };
 		A4910E0126D0058B00A691AE /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		A4910E0226D0058B00A691AE /* Logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
 		A4910E0426D0082800A691AE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 		A4910DFD26CFF58A00A691AE /* SandBox */ = {
 			isa = PBXGroup;
 			children = (
-				A4910DFE26CFF5AA00A691AE /* SandBoxApp.cpp */,
-				A4910DFF26CFF5AA00A691AE /* SandBoxApp.hpp */,
+				91DEC27526D9E7F400699F22 /* SandBoxApp.cpp */,
+				91DEC27426D9E7F400699F22 /* SandBoxApp.hpp */,
 			);
 			path = SandBox;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A49C103226D3D15F00DAB7D2 /* glad.c in Sources */,
-				A49C102D26D3D15500DAB7D2 /* SandBoxApp.cpp in Sources */,
+				91DEC27626D9E7F400699F22 /* SandBoxApp.cpp in Sources */,
 				A49C102E26D3D15500DAB7D2 /* Application.cpp in Sources */,
 				8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */,
 				A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */,
