@@ -6,7 +6,6 @@
 //
 
 #include "UI.hpp"
-#include <stdio.h>
 namespace SEngine{
 bool UI::initialized = false;
 void UI::Text(const char *text, ...){
@@ -14,7 +13,6 @@ void UI::Text(const char *text, ...){
     va_start(args, text);
     ImGui::Text(text, args);
     va_end(args);
-    
 }
 
 void UI::Button(const char *lable){
@@ -34,7 +32,6 @@ UI::UI(GLFWwindow* window){
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 330");
         initialized = true;
-        printf("UI init\n");
     }
     
 }

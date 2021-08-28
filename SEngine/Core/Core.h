@@ -12,5 +12,6 @@
 
 #include "Logger.hpp"
 #include "Window.hpp"
+#include "Render2D.hpp"
 
 #endif /* Core_h */

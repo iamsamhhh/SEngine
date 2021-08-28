@@ -8,8 +8,8 @@
 #ifndef Window_hpp
 #define Window_hpp
 
-#include "Core.h"
 #include "EntryPoint.hpp"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "UI.hpp"
 
@@ -28,6 +28,14 @@ public:
     
     void SetToCurrent();
     void SetUpUI();
+    static bool SetUpRender(){
+        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
+            return false;
+        }
+        
+        return true;
+    }
+    
     void Begin(const char* name);
     void End();
     void FrameStart();

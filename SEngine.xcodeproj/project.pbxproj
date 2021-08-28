@@ -50,6 +50,11 @@
 		8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = ThirdParty/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Render2D.cpp; sourceTree = "<group>"; };
 		8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Render2D.hpp; sourceTree = "<group>"; };
+		91DEC23626D9BDA000699F22 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		91DEC23826D9BE0200699F22 /* Texture.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Texture.fs; sourceTree = "<group>"; };
+		91DEC23926D9BE0200699F22 /* OneColor.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = OneColor.vs; sourceTree = "<group>"; };
+		91DEC23A26D9BE0200699F22 /* OneColor.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = OneColor.fs; sourceTree = "<group>"; };
+		91DEC23B26D9BE0200699F22 /* Texture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Texture.vs; sourceTree = "<group>"; };
 		A404A99326D28FA300A849C0 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		A404A99426D28FA300A849C0 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		A404A99626D28FE700A849C0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -104,11 +109,23 @@
 			path = imgui;
 			sourceTree = "<group>";
 		};
+		91DEC23726D9BE0200699F22 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				91DEC23826D9BE0200699F22 /* Texture.fs */,
+				91DEC23926D9BE0200699F22 /* OneColor.vs */,
+				91DEC23A26D9BE0200699F22 /* OneColor.fs */,
+				91DEC23B26D9BE0200699F22 /* Texture.vs */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
 		A404A99826D29E9000A849C0 /* Render2D */ = {
 			isa = PBXGroup;
 			children = (
 				8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */,
 				8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */,
+				91DEC23626D9BDA000699F22 /* Shader.h */,
 			);
 			path = Render2D;
 			sourceTree = "<group>";
@@ -157,6 +174,7 @@
 		A4910DD926CFEE0B00A691AE /* SEngine */ = {
 			isa = PBXGroup;
 			children = (
+				91DEC23726D9BE0200699F22 /* shaders */,
 				A4910DE126CFEE3B00A691AE /* Core */,
 				A49C0FF326D3BBE400DAB7D2 /* UserInterface */,
 				A404A99826D29E9000A849C0 /* Render2D */,

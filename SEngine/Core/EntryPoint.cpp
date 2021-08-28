@@ -7,24 +7,38 @@
 
 #include "EntryPoint.hpp"
 
+
+float vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.0f,  0.5f, 0.0f
+};
+unsigned int indices[] = {
+    0, 2, 1
+};
+float quadVertices[] = {
+    -0.5f, -0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+     0.5f,  0.5f, 0.0f,
+    -0.5f,  0.5f, 0.0f
+};
 int main(){
     
     auto app = SEngine::CreatApplication();
     SEngine::Window::InitWindow();
     SEngine::Window* window = new SEngine::Window(5000, 5000, "SEngine");
     window->SetToCurrent();
-    
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
-        return -1;
-    }
+    SEngine::Window::SetUpRender();
     window->SetUpUI();
+    SEngine::Render2D render = SEngine::Render2D();
     
     while (!glfwWindowShouldClose(window->GetWindow())) {
-        glClearColor(0.5, 0.5, 0.5, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
+        render.Clear();
         
+        render.DrawQuad(quadVertices);
+//        render.DrawTri(vertices);
         window->FrameStart();
-        
+
         window->Begin("A");
         window->Text("Hello A!");
         window->End();
@@ -32,7 +46,6 @@ int main(){
         window->Text("Hello B!");
         window->End();
         window->FrameEnd();
-        
         
         glfwPollEvents();
         glfwSwapBuffers(window->GetWindow());
