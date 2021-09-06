@@ -21,7 +21,6 @@ public:
     //initialize the window hints
     static bool InitWindow();
     
-    
     Window(unsigned int width, unsigned int height, const char* title);
     ~Window();
     
@@ -37,11 +36,14 @@ public:
         return true;
     }
     
-    void Begin(const char* name);
+    void Begin(const char* name, bool* isOpen);
     void End();
     void FrameStart();
-    void Text(const char* text, ...);
-    void Button(const char* lable);
+    void MenuBarStart();
+    bool BeginMenu(const char* name);
+    bool MenuItem(const char* name, const char* shortCut, bool* selected);
+    void EndMenu();
+    void MenuBarEnd();
     void FrameEnd();
     
     

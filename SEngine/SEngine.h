@@ -9,7 +9,8 @@
 #define SEngine_h
 
 #include "Application.hpp"
-
+#include "Entity.hpp"
 #include "Logger.hpp"
+#include "Vectors.hpp"
 
 #endif /* SEngine_h */

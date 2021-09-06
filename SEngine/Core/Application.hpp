@@ -14,7 +14,7 @@ class Application{
 public:
     Application();
     virtual ~Application();
-    void Run();
+    virtual void Run(){}
     unsigned int scrWidth = 800, scrHeight = 720;
 };
 

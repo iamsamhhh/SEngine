@@ -7,46 +7,43 @@
 
 #include "EntryPoint.hpp"
 
+void RunUI(SEngine::Window* window);
 
-float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-     0.0f,  0.5f, 0.0f
-};
-unsigned int indices[] = {
-    0, 2, 1
-};
-float quadVertices[] = {
-     0.5f,  0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-    -0.5f, -0.5f, 0.0f,
-    -0.5f,  0.5f, 0.0f
-};
+
+void Inspector_w(SEngine::Window* window);
+void Project_w(SEngine::Window* window);
+void EditorSettings_w(SEngine::Window* window);
+
+
+void RunMenuBar(SEngine::Window* window);
+
+
 int main(){
     
-    auto app = SEngine::CreatApplication();
     SEngine::Window::InitWindow();
     SEngine::Window* window = new SEngine::Window(5000, 5000, "SEngine");
     window->SetToCurrent();
     SEngine::Window::SetUpRender();
     window->SetUpUI();
-    SEngine::Render2D render = SEngine::Render2D();
-    
+    auto app = SEngine::CreatApplication();
+    unsigned int frameCount = 0;
     while (!glfwWindowShouldClose(window->GetWindow())) {
-        render.Clear();
         
-        render.DrawQuad(quadVertices);
-//        render.DrawTri(vertices);
+        SEngine::Render2D::Clear();
+        
+        app->Run();
+        
+        SEngine::Render2D::DrawAllTri();
+//        SEngine::Render2D::DrawAllQuad();
+        
         window->FrameStart();
-
-        window->Begin("A");
-        window->Text("Hello A!");
-        window->End();
-        window->Begin("B");
-        window->Text("Hello B!");
-        window->End();
+        RunUI(window);
+        window->MenuBarStart();
+        RunMenuBar(window);
+        window->MenuBarEnd();
         window->FrameEnd();
         
+        frameCount++;
         glfwPollEvents();
         glfwSwapBuffers(window->GetWindow());
     }
@@ -56,4 +53,55 @@ int main(){
     
     return 0;
 }
+bool InspectorIsOpen, ProjectIsOpen, EditorSettingsIsOpen;
 
+void RunUI(SEngine::Window* window){
+    if (InspectorIsOpen) Inspector_w(window);
+    if (ProjectIsOpen) Project_w(window);
+    if (EditorSettingsIsOpen) EditorSettings_w(window);
+}
+
+
+void Project_w(SEngine::Window* window){
+    window->Begin("project", &ProjectIsOpen);
+    ImGui::Text("this is a file");
+    window->End();
+}
+char buffer[30];
+void Inspector_w(SEngine::Window* window){
+    window->Begin("Inspector", &InspectorIsOpen);
+    if (ImGui::CollapsingHeader("Transform")){
+        ImGui::Text("Position:");
+        ImGui::Text("x:");
+        ImGui::InputText("x", buffer, sizeof(buffer));
+        ImGui::Text("y");
+    }
+    if (ImGui::Button("add behaviour")) {
+        
+    }
+    window->End();
+}
+void EditorSettings_w(SEngine::Window* window){
+    window->Begin("Editor Settings", &EditorSettingsIsOpen);
+    ImGui::Text("color");
+    window->End();
+}
+
+
+void RunMenuBar(SEngine::Window* window){
+    ImGui::Text("SEngine");
+    if (window->BeginMenu("Windows")) {
+        if (window->MenuItem("Inspector", NULL, &InspectorIsOpen)){
+            
+        }
+        if (window->MenuItem("Project", NULL, &ProjectIsOpen)){
+            
+        }
+        if (window->MenuItem("EditorSettings", NULL, &EditorSettingsIsOpen)){
+            
+        }
+        
+        window->EndMenu();
+        
+    }
+}

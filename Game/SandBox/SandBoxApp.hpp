@@ -9,16 +9,20 @@
 #define SandBoxApp_hpp
 
 #include "SEngine.h"
+#include "SEngine_internal.h"
 
-class SandBox: public SEngine::Application{
+namespace SEngine{
+
+
+class SandBox: public Application{
 public:
     SandBox();
     virtual ~SandBox();
+    void Run() override;
 private:
     SEngine::Logger* logger;
 };
 
-SEngine::Application* SEngine::CreatApplication();
-
-
+Application* CreatApplication();
+}
 #endif /* SandBoxApp_hpp */

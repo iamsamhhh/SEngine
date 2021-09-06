@@ -15,7 +15,6 @@ Window::Window(unsigned int width, unsigned int height, const char* title){
         
     }
     Window::ID = glfwCreateWindow(width, height, title, NULL, NULL);
-    
     printf("window init\n");
 }
 Window::~Window(){
@@ -48,18 +47,6 @@ void Window::SetToCurrent(){
 void Window::SetUpUI(){
     ui = new UI(ID);
 }
-void Window::Text(const char *text, ...){
-    va_list args;
-    va_start(args, text);
-    ui->Text(text, args);
-    va_end(args);
-    
-}
-
-void Window::Button(const char *lable){
-    ui->Button(lable);
-}
-
 
 void Window::FrameStart(){
     ui->FrameStart();
@@ -69,13 +56,30 @@ void Window::FrameEnd(){
     ui->FrameEnd();
 }
 
-void Window::Begin(const char* name){
+void Window::Begin(const char* name, bool* isOpen){
 //    glfwMakeContextCurrent(ID);
     ui->Begin(name);
+    if (ImGui::Button("Close")){
+        *isOpen = false;
+    }
 }
 void Window::End(){
     ui->End();
 }
-
+void Window::MenuBarStart(){
+    ui->MenuBarStart();
+}
+bool Window::BeginMenu(const char* name){
+    return ui->BeginMenu(name);
+}
+bool Window::MenuItem(const char* name, const char* shortCut, bool* selected){
+    return ui->MenuItem(name, shortCut, selected);
+}
+void Window::EndMenu(){
+    ui->EndMenu();
+}
+void Window::MenuBarEnd(){
+    ui->MenuBarEnd();
+}
 
 }

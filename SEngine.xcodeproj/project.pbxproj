@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C6780FD26DA59AB00361CF1 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C6780FB26DA59AB00361CF1 /* Events.cpp */; };
 		8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */; };
 		8CDFDBCF26D93BD200C610B2 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */; };
 		8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */; };
@@ -14,6 +15,8 @@
 		8CDFDBD526D93C6B00C610B2 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD426D93C6B00C610B2 /* imgui_tables.cpp */; };
 		8CDFDBD726D93C8B00C610B2 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */; };
 		8CDFDBDA26D95B2C00C610B2 /* Render2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */; };
+		8CF9AEC226E3D65B0009BB52 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9AEC026E3D65B0009BB52 /* Entity.cpp */; };
+		8CF9AEC526E3D6F10009BB52 /* Vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9AEC326E3D6F10009BB52 /* Vectors.cpp */; };
 		91DEC27626D9E7F400699F22 /* SandBoxApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91DEC27526D9E7F400699F22 /* SandBoxApp.cpp */; };
 		A404A99726D28FE700A849C0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A404A99626D28FE700A849C0 /* IOKit.framework */; };
 		A462A71826D2606A005574F0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A462A71726D2606A005574F0 /* CoreVideo.framework */; };
@@ -42,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C6780FB26DA59AB00361CF1 /* Events.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
+		8C6780FC26DA59AB00361CF1 /* Events.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Events.hpp; sourceTree = "<group>"; };
 		8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = ThirdParty/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = ThirdParty/imgui/backends/imgui_impl_opengl3.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = ThirdParty/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
@@ -50,6 +55,11 @@
 		8CDFDBD626D93C8B00C610B2 /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = ThirdParty/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Render2D.cpp; sourceTree = "<group>"; };
 		8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Render2D.hpp; sourceTree = "<group>"; };
+		8CF9AEC026E3D65B0009BB52 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		8CF9AEC126E3D65B0009BB52 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		8CF9AEC326E3D6F10009BB52 /* Vectors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vectors.cpp; sourceTree = "<group>"; };
+		8CF9AEC426E3D6F10009BB52 /* Vectors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vectors.hpp; sourceTree = "<group>"; };
+		8CF9AEC926E3DABA0009BB52 /* SEngine_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEngine_internal.h; sourceTree = "<group>"; };
 		91DEC23626D9BDA000699F22 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		91DEC23826D9BE0200699F22 /* Texture.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Texture.fs; sourceTree = "<group>"; };
 		91DEC23926D9BE0200699F22 /* OneColor.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = OneColor.vs; sourceTree = "<group>"; };
@@ -109,13 +119,32 @@
 			path = imgui;
 			sourceTree = "<group>";
 		};
+		8CF9AEBF26E3D63D0009BB52 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8CF9AEC026E3D65B0009BB52 /* Entity.cpp */,
+				8CF9AEC126E3D65B0009BB52 /* Entity.hpp */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8CFDCDE126DBA70100AB1BFD /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				A404A99326D28FA300A849C0 /* Window.cpp */,
+				A404A99426D28FA300A849C0 /* Window.hpp */,
+				A404A99826D29E9000A849C0 /* Render2D */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
 		91DEC23726D9BE0200699F22 /* shaders */ = {
 			isa = PBXGroup;
 			children = (
-				91DEC23826D9BE0200699F22 /* Texture.fs */,
 				91DEC23926D9BE0200699F22 /* OneColor.vs */,
 				91DEC23A26D9BE0200699F22 /* OneColor.fs */,
 				91DEC23B26D9BE0200699F22 /* Texture.vs */,
+				91DEC23826D9BE0200699F22 /* Texture.fs */,
 			);
 			path = shaders;
 			sourceTree = "<group>";
@@ -174,12 +203,14 @@
 		A4910DD926CFEE0B00A691AE /* SEngine */ = {
 			isa = PBXGroup;
 			children = (
+				8CF9AEBF26E3D63D0009BB52 /* Entity */,
+				8CFDCDE126DBA70100AB1BFD /* Render */,
 				91DEC23726D9BE0200699F22 /* shaders */,
 				A4910DE126CFEE3B00A691AE /* Core */,
 				A49C0FF326D3BBE400DAB7D2 /* UserInterface */,
-				A404A99826D29E9000A849C0 /* Render2D */,
 				A462A71F26D26579005574F0 /* Debug */,
 				A4910DFB26CFF35F00A691AE /* SEngine.h */,
+				8CF9AEC926E3DABA0009BB52 /* SEngine_internal.h */,
 			);
 			path = SEngine;
 			sourceTree = "<group>";
@@ -187,13 +218,15 @@
 		A4910DE126CFEE3B00A691AE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A404A99326D28FA300A849C0 /* Window.cpp */,
-				A404A99426D28FA300A849C0 /* Window.hpp */,
 				A4910DE226CFEE5300A691AE /* EntryPoint.cpp */,
 				A4910DE326CFEE5300A691AE /* EntryPoint.hpp */,
 				A4910DE526CFEEBF00A691AE /* Application.cpp */,
 				A4910DE626CFEEBF00A691AE /* Application.hpp */,
 				A4910E0426D0082800A691AE /* Core.h */,
+				8C6780FB26DA59AB00361CF1 /* Events.cpp */,
+				8C6780FC26DA59AB00361CF1 /* Events.hpp */,
+				8CF9AEC326E3D6F10009BB52 /* Vectors.cpp */,
+				8CF9AEC426E3D6F10009BB52 /* Vectors.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -284,10 +317,13 @@
 				A49C103226D3D15F00DAB7D2 /* glad.c in Sources */,
 				91DEC27626D9E7F400699F22 /* SandBoxApp.cpp in Sources */,
 				A49C102E26D3D15500DAB7D2 /* Application.cpp in Sources */,
+				8C6780FD26DA59AB00361CF1 /* Events.cpp in Sources */,
 				8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */,
 				A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */,
 				A49C103026D3D15500DAB7D2 /* Window.cpp in Sources */,
 				8CDFDBD326D93C4500C610B2 /* imgui_draw.cpp in Sources */,
+				8CF9AEC526E3D6F10009BB52 /* Vectors.cpp in Sources */,
+				8CF9AEC226E3D65B0009BB52 /* Entity.cpp in Sources */,
 				8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */,
 				8CDFDBD726D93C8B00C610B2 /* imgui_widgets.cpp in Sources */,
 				A49C103126D3D15500DAB7D2 /* Logger.cpp in Sources */,

@@ -1,8 +1,11 @@
 
 #version 330 core
 layout (location = 0) in vec3 aPos;
-
+uniform vec3 position;
+uniform vec3 scale;
+uniform vec3 rotation;
+uniform vec3 color;
 void main()
 {
-    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
+    gl_Position = vec4(aPos + position, 1.0);
 }

@@ -11,17 +11,23 @@
 #include <imgui.h>
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
+#include <imgui_internal.h>
+#include <iostream>
+
 namespace SEngine{
 
 class UI{
 public:
     UI(GLFWwindow* window);
     void FrameStart();
-    void Text(const char* text, ...);
-    void Button(const char* lable);
     void Begin(const char* name);
     void End();
     void FrameEnd();
+    void MenuBarStart();
+    bool BeginMenu(const char* name);
+    bool MenuItem(const char* name, const char* shortCut, bool* selected);
+    void EndMenu();
+    void MenuBarEnd();
 private:
     GLFWwindow* m_window;
     static bool initialized;
