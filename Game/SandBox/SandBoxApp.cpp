@@ -57,9 +57,9 @@ SEngine::SandBox::~SandBox()
 
 
 void SEngine::SandBox::Run(){
-    Render2D::SetUniformFuncFor(i, SetUniformFori);
-    Render2D::SetUniformFuncFor(q, SetUniformForq);
-    Render2D::SetUniformFuncFor(w, SetUniformForw);
+    Render2D::SetUniformFuncFor(0, i, SetUniformFori);
+    Render2D::SetUniformFuncFor(0, q, SetUniformForq);
+    Render2D::SetUniformFuncFor(0, w, SetUniformForw);
 }
 
 SEngine::Application* SEngine::CreatApplication(){

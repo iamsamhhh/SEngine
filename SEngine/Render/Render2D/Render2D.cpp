@@ -10,9 +10,9 @@
 namespace SEngine {
 
 bool Render2D::inited = false;
-SetUniformFunc Render2D::funcs[3][2187/3]{};
-float Render2D::vertices[3][2187]{};
-Shader Render2D::shaders[3]{};
+SetUniformFunc Render2D::funcs[MAX_NUM_OF_SHADER][2187/3]{};
+float Render2D::vertices[MAX_NUM_OF_SHADER][2187]{};
+Shader Render2D::shaders[MAX_NUM_OF_SHADER]{};
 unsigned int Render2D::count = 0;
 //unsigned int shaderID = 0;
 
@@ -29,12 +29,12 @@ GLuint Render2D::CreatTri(float vertices[9], Shader shader, unsigned int shaderI
 
 
 
-void Render2D::SetUniformFuncFor(unsigned int ID, SetUniformFunc setUniformFor){
-    funcs[0][ID] = setUniformFor;
+void Render2D::SetUniformFuncFor(unsigned int shaderID, unsigned int verticesID, SetUniformFunc setUniformFor){
+    funcs[shaderID][verticesID] = setUniformFor;
 }
 
 void Render2D::DrawAllTri(){
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < MAX_NUM_OF_SHADER; i++) {
         GLuint VAO, VBO;
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
@@ -44,7 +44,7 @@ void Render2D::DrawAllTri(){
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
         glEnableVertexAttribArray(0);
         glBindVertexArray(VAO);
-        for (int j = 0; j < 2187; j+=3) {
+        for (int j = 0; j < MAX_NUM_OF_VERTICES_PER_SHADER; j+=3) {
             shaders[i].use();
             
             if (funcs[i][j/3] != nullptr)
