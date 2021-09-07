@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C6780FD26DA59AB00361CF1 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C6780FB26DA59AB00361CF1 /* Events.cpp */; };
+		8C8793D126E773E000D0270B /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C8793CF26E773E000D0270B /* Material.cpp */; };
 		8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */; };
 		8CDFDBCF26D93BD200C610B2 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */; };
 		8CDFDBD126D93BDB00C610B2 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		8C6780FB26DA59AB00361CF1 /* Events.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
 		8C6780FC26DA59AB00361CF1 /* Events.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Events.hpp; sourceTree = "<group>"; };
+		8C8793CF26E773E000D0270B /* Material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
+		8C8793D026E773E000D0270B /* Material.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Material.hpp; sourceTree = "<group>"; };
 		8CDFDBCC26D93BBF00C610B2 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = ThirdParty/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBCE26D93BD200C610B2 /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = ThirdParty/imgui/backends/imgui_impl_opengl3.cpp; sourceTree = SOURCE_ROOT; };
 		8CDFDBD026D93BDB00C610B2 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = ThirdParty/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
@@ -133,7 +136,10 @@
 			children = (
 				A404A99326D28FA300A849C0 /* Window.cpp */,
 				A404A99426D28FA300A849C0 /* Window.hpp */,
+				91DEC23626D9BDA000699F22 /* Shader.h */,
 				A404A99826D29E9000A849C0 /* Render2D */,
+				8C8793CF26E773E000D0270B /* Material.cpp */,
+				8C8793D026E773E000D0270B /* Material.hpp */,
 			);
 			path = Render;
 			sourceTree = "<group>";
@@ -154,7 +160,6 @@
 			children = (
 				8CDFDBD826D95B2C00C610B2 /* Render2D.cpp */,
 				8CDFDBD926D95B2C00C610B2 /* Render2D.hpp */,
-				91DEC23626D9BDA000699F22 /* Shader.h */,
 			);
 			path = Render2D;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				A49C102F26D3D15500DAB7D2 /* UI.cpp in Sources */,
 				A49C103026D3D15500DAB7D2 /* Window.cpp in Sources */,
 				8CDFDBD326D93C4500C610B2 /* imgui_draw.cpp in Sources */,
+				8C8793D126E773E000D0270B /* Material.cpp in Sources */,
 				8CF9AEC526E3D6F10009BB52 /* Vectors.cpp in Sources */,
 				8CF9AEC226E3D65B0009BB52 /* Entity.cpp in Sources */,
 				8CDFDBCD26D93BBF00C610B2 /* imgui.cpp in Sources */,

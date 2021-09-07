@@ -2,8 +2,6 @@
 #version 330 core
 layout (location = 0) in vec3 aPos;
 uniform vec3 position;
-uniform vec3 scale;
-uniform vec3 rotation;
 uniform vec3 color;
 void main()
 {

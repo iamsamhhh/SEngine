@@ -9,39 +9,56 @@
 #define Entity_hpp
 
 #include "Core.h"
+#include "Render2D.hpp"
 
-#define MAX_NUM_OF_VERTEX_IN_ONE_MESH 64
+#define MAX_NUM_OF_VERTEX_IN_ONE_MESH 123
 namespace SEngine{
 class Transform{
 public:
-    Transform(Vector3 position);
+    Transform();
     Vector3 position;
     Vector3 scale;
     Vector3 rotation;
 private:
    
 };
-class Mesh{
-public:
-    Mesh(Vector3* vertexData, unsigned int* indices);
-    Vector3 vertexData[MAX_NUM_OF_VERTEX_IN_ONE_MESH];
-    unsigned int indices[MAX_NUM_OF_VERTEX_IN_ONE_MESH];
-    unsigned int ID;
+
+
+enum EMeshType{
+    quad,
+    triangle,
+    custom
 };
 
-class Material{
+class Mesh{
 public:
-    Material(const char* vertexShaderPath, const char* fragmentShaderPath, SetUniformFunc func);
-    Shader shader;
-    SetUniformFunc func;
+    Mesh(float *vertexData, GLuint *indices, EMeshType type);
+    static Mesh mesh_triangle;
+    static Mesh mesh_quad;
+    EMeshType meshType;
+    float vertexData[MAX_NUM_OF_VERTEX_IN_ONE_MESH];
+    GLuint indices[MAX_NUM_OF_VERTEX_IN_ONE_MESH + 2];
+private:
 };
+
+class MeshRenderer{
+public:
+    MeshRenderer(Mesh mesh, Material mat);
+    
+private:
+    Material p_material;
+};
+
+
 
 class Entity{
 public:
-    Entity(Material material, Mesh mesh, Transform transform);
+    Entity(Mesh mesh, Transform transform, Material material, const char* name);
+    MeshRenderer renderer;
     Transform transform;
-    Material material;
     Mesh mesh;
+    Material material;
+    const char* name;
 };
 }
 

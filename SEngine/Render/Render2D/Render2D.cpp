@@ -9,32 +9,36 @@
 
 namespace SEngine {
 
-bool Render2D::inited = false;
-SetUniformFunc Render2D::funcs[MAX_NUM_OF_SHADER][2187/3]{};
-float Render2D::vertices[MAX_NUM_OF_SHADER][2187]{};
-Shader Render2D::shaders[MAX_NUM_OF_SHADER]{};
+float Render2D::vertices[MAX_NUM_OF_MATERIAL][MAX_NUM_OF_VERTICES_PER_SHADER]{};
 unsigned int Render2D::count = 0;
-//unsigned int shaderID = 0;
+Material Render2D::materials[MAX_NUM_OF_MATERIAL]{};
 
-GLuint Render2D::CreatTri(float vertices[9], Shader shader, unsigned int shaderID){
-    for (int i = 0; i < 9; i++) {
-        Render2D::vertices[shaderID][count + i] = vertices[i];
-        std::cout << "count + i:" << count + i << "   i:" << i << std::endl;
+
+GLuint matCount = 0;
+
+void Render2D::CreatTri(float vertices[9], Material material){
+    for (int i = 0; i < matCount; i++) {
+        if (materials[i].ID == material.ID) {
+            for (int j = 0; j < 9; j++) {
+                Render2D::vertices[i][count + j] = vertices[j];
+                std::cout << "count + j:" << count + j << "   j:" << j << std::endl;
+            }
+            count += 9;
+            std::cout << count << "after" << std::endl;
+        }
+    }
+    materials[matCount] = material;
+    for (int j = 0; j < 9; j++) {
+        Render2D::vertices[matCount][count + j] = vertices[j];
+        std::cout << "count + j:" << count + j << "   j:" << j << std::endl;
     }
     count += 9;
+    matCount++;
     std::cout << count << "after" << std::endl;
-    Render2D::shaders[shaderID] = shader;
-    return count/9-1;
 }
 
-
-
-void Render2D::SetUniformFuncFor(unsigned int shaderID, unsigned int verticesID, SetUniformFunc setUniformFor){
-    funcs[shaderID][verticesID] = setUniformFor;
-}
-
-void Render2D::DrawAllTri(){
-    for (int i = 0; i < MAX_NUM_OF_SHADER; i++) {
+void Render2D::DrawAll(){
+    for (int i = 0; i < MAX_NUM_OF_MATERIAL; i++) {
         GLuint VAO, VBO;
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
@@ -45,14 +49,27 @@ void Render2D::DrawAllTri(){
         glEnableVertexAttribArray(0);
         glBindVertexArray(VAO);
         for (int j = 0; j < MAX_NUM_OF_VERTICES_PER_SHADER; j+=3) {
-            shaders[i].use();
-            
-            if (funcs[i][j/3] != nullptr)
-                funcs[i][j/3](&shaders[i]);
-            
+            materials[i].Use();
             glDrawArrays(GL_TRIANGLES, j, 3);
         }
     }
 }
+
+void Render2D::CreatQuad(float vertices[12], SEngine::Material material) { 
+    float ver1[9]{
+        vertices[3], vertices[4], vertices[5],
+        vertices[0], vertices[1], vertices[2],
+        vertices[6], vertices[7], vertices[8]
+    };
+    
+    float ver2[9]{
+        vertices[0], vertices[1], vertices[2],
+        vertices[9], vertices[10], vertices[11],
+        vertices[6], vertices[7], vertices[8]
+    };
+    CreatTri(ver1, material);
+    CreatTri(ver2, material);
+}
+
 
 }

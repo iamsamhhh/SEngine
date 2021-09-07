@@ -19,7 +19,6 @@ public:
     Logger(std::string name);
     virtual ~Logger();
     std::shared_ptr<spdlog::logger>& GetLogger();
-    
 private:
     std::shared_ptr<spdlog::logger> m_Logger;
 };

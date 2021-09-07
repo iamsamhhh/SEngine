@@ -21,9 +21,9 @@ public:
     Shader(){
         ID = 0;
     }
+    
     // constructor reads and builds the shader
     Shader(const char* vertexPath, const char* fragmentPath){
-        // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;
         std::string fragmentCode;
         std::ifstream vShaderFile;
@@ -101,6 +101,7 @@ public:
         glDeleteShader(vertex);
         glDeleteShader(fragment);
     }
+    
     // use/activate the shader
     void use(){
         glUseProgram(ID);

@@ -15,6 +15,7 @@ Logger::Logger(std::string name){
 Logger::~Logger(){
     
 }
+
 std::shared_ptr<spdlog::logger>& Logger::GetLogger(){
     return Logger::m_Logger;
 }

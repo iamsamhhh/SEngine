@@ -33,7 +33,7 @@ int main(){
         
         app->Run();
         
-        SEngine::Render2D::DrawAllTri();
+        SEngine::Render2D::DrawAll();
 //        SEngine::Render2D::DrawAllQuad();
         
         window->FrameStart();

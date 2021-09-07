@@ -9,30 +9,27 @@
 #define Render2D_hpp
 
 #include <stdio.h>
+#include "Material.hpp"
 #include "Shader.h"
-#include "Vectors.hpp"
-#define MAX_NUM_OF_VERTICES_PER_SHADER 2187
-#define MAX_NUM_OF_SHADER 5
+
+#define MAX_NUM_OF_VERTICES_PER_SHADER 243
+
 namespace SEngine {
 
-typedef void (* SetUniformFunc)(Shader* shader);
 class Render2D{
 public:
-    static GLuint CreatTri(float vertices[9], Shader shader, unsigned int shaderID);
-    static void SetUniformFuncFor(unsigned int shaderID, unsigned int verticesID, SetUniformFunc setUniformFor);
-    static void DrawAllTri();
+    static void CreatTri(float vertices[9], Material material);
+    static void CreatQuad(float vertices[12], Material material);
+    static void DrawAll();
     static void Clear(){
         glClearColor(0.5, 0.5, 0.5, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
     }
 private:
-    static float vertices[MAX_NUM_OF_SHADER][MAX_NUM_OF_VERTICES_PER_SHADER];
-    static Shader shaders[MAX_NUM_OF_SHADER];
-    static ::SEngine::SetUniformFunc funcs[MAX_NUM_OF_SHADER][MAX_NUM_OF_VERTICES_PER_SHADER/3];
+    static Material materials[MAX_NUM_OF_MATERIAL];
+    static float vertices[MAX_NUM_OF_MATERIAL][MAX_NUM_OF_VERTICES_PER_SHADER];
     static unsigned int count;
-    static bool inited;
 };
-
 
 }
 

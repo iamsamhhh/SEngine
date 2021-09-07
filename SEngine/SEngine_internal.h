@@ -9,6 +9,7 @@
 #define SEngine_internal_h
 
 #include "Render2D.hpp"
+#include "Material.hpp"
 const char* oneColor_vertexShaderPath = "/Users/samcyx/dev/SEngine/SEngine/shaders/OneColor.vs";
 const char* oneColor_fragmentShaderPath = "/Users/samcyx/dev/SEngine/SEngine/shaders/OneColor.fs";
 #endif /* SEngine_internal_h */

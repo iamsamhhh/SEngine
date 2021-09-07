@@ -10,6 +10,7 @@
 
 
 #include "Application.hpp"
+#include "Render2D.hpp"
 #include "Core.h"
 
 #endif /* EntryPoint_hpp */
