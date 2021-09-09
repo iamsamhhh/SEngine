@@ -12,5 +12,8 @@
 #include "Entity.hpp"
 #include "Logger.hpp"
 #include "Vectors.hpp"
+#include "Material.hpp"
+
+using namespace SEngine;
 
 #endif /* SEngine_Internal_h */

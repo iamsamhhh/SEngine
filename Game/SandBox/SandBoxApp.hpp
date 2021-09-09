@@ -10,8 +10,6 @@
 
 #include "SEngine.h"
 #include "SEngine_internal.h"
-using namespace SEngine;
-using namespace SEngine_Internal;
 
 class SandBox: public Application{
 public:

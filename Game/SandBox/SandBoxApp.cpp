@@ -22,10 +22,11 @@ SandBox::SandBox(){
     logger->GetLogger()->info("app initialized");
     scrHeight = 800;
     scrWidth = 1300;
-    Shader oneColor_shader(oneColor_vertexShaderPath, oneColor_fragmentShaderPath);
-    SEngine::Material matForQuad = SEngine::Material(oneColor_shader, SetUniformForTri);
+    
+    SEngine::Material matForQuad = SEngine::Material();
     Entity quad = Entity(Mesh::mesh_quad, Transform(), matForQuad, "quad");
-    SEngine::Material matForTri = SEngine::Material(oneColor_shader, SetUniformForQuad);
+    
+    SEngine::Material matForTri = SEngine::Material(SetUniformForQuad);
     Entity tri = Entity(Mesh::mesh_triangle, Transform(), matForTri, "tri");
     
 }

@@ -25,6 +25,7 @@ int main(){
     window->SetToCurrent();
     SEngine_Internal::Window::SetUpRender();
     window->SetUpUI();
+    SEngine::Material::GenerateDefaultShader();
     auto app = SEngine::CreatApplication();
     unsigned int frameCount = 0;
     while (!glfwWindowShouldClose(window->GetWindow())) {
