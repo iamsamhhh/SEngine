@@ -1,6 +1,6 @@
 //
 //  Log.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/20.
 //

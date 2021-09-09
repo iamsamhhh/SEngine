@@ -1,6 +1,6 @@
 //
 //  UI.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/23.
 //
@@ -14,7 +14,7 @@
 #include <imgui_internal.h>
 #include <iostream>
 
-namespace SEngine{
+namespace SEngine_Internal{
 
 class UI{
 public:

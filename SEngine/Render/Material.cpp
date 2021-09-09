@@ -1,6 +1,6 @@
 //
 //  Material.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/9/7.
 //
@@ -21,7 +21,7 @@ void Material::Use(){
     
 }
 
-Material::Material(Shader shader, SEngine::SetUniformFunc func) : shader(shader), func(func)
+Material::Material(Shader shader, SetUniformFunc func) : shader(shader), func(func)
 { 
     if (count != MAX_NUM_OF_MATERIAL - 1) {
         count++;

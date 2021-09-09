@@ -1,6 +1,6 @@
 //
 //  Application.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/20.
 //
@@ -9,7 +9,7 @@
 #define Application_hpp
 
 
-namespace SEngine{
+namespace SEngine {
 class Application{
 public:
     Application();

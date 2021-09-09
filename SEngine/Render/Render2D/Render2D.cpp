@@ -1,22 +1,22 @@
 //
 //  Render2D.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/8/28.
 //
 
 #include "Render2D.hpp"
 
-namespace SEngine {
+namespace SEngine_Internal {
 
 float Render2D::vertices[MAX_NUM_OF_MATERIAL][MAX_NUM_OF_VERTICES_PER_SHADER]{};
 unsigned int Render2D::count = 0;
-Material Render2D::materials[MAX_NUM_OF_MATERIAL]{};
+SEngine::Material Render2D::materials[MAX_NUM_OF_MATERIAL]{};
 
 
 GLuint matCount = 0;
 
-void Render2D::CreatTri(float vertices[9], Material material){
+void Render2D::CreatTri(float vertices[9], SEngine::Material material){
     for (int i = 0; i < matCount; i++) {
         if (materials[i].ID == material.ID) {
             for (int j = 0; j < 9; j++) {

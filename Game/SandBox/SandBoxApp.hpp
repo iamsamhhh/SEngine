@@ -10,9 +10,8 @@
 
 #include "SEngine.h"
 #include "SEngine_internal.h"
-
-namespace SEngine{
-
+using namespace SEngine;
+using namespace SEngine_Internal;
 
 class SandBox: public Application{
 public:
@@ -20,9 +19,9 @@ public:
     virtual ~SandBox();
     void Run() override;
 private:
-    SEngine::Logger* logger;
+    Logger* logger;
 };
 
-Application* CreatApplication();
-}
+Application* SEngine::CreatApplication();
+
 #endif /* SandBoxApp_hpp */

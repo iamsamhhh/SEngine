@@ -1,6 +1,6 @@
 //
 //  Entity.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/9/5.
 //
@@ -52,20 +52,20 @@ Mesh::Mesh(float* vertexData, GLuint* indices, EMeshType type)
     
 }
 
-MeshRenderer::MeshRenderer(Mesh mesh, Material material) : p_material(material) {
+MeshRenderer::MeshRenderer(Mesh mesh, SEngine::Material material) : p_material(material) {
     switch (mesh.meshType) {
         case triangle:
-            Render2D::CreatTri(mesh.vertexData, p_material);
+            SEngine_Internal::Render2D::CreatTri(mesh.vertexData, p_material);
             break;
         case quad:
-            Render2D::CreatQuad(mesh.vertexData, p_material);
+            SEngine_Internal::Render2D::CreatQuad(mesh.vertexData, p_material);
             break;
         default:
             break;
     };
 }
 
-Entity::Entity(Mesh mesh, Transform transform, Material material, const char* name) : mesh(mesh), transform(transform), name(name), material(material), renderer(mesh, material)
+Entity::Entity(Mesh mesh, Transform transform, SEngine::Material material, const char* name) : mesh(mesh), transform(transform), name(name), material(material), renderer(mesh, material)
 {
     
 }

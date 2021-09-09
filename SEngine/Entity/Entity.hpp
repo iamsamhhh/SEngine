@@ -1,6 +1,6 @@
 //
 //  Entity.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/9/5.
 //
@@ -43,21 +43,21 @@ private:
 
 class MeshRenderer{
 public:
-    MeshRenderer(Mesh mesh, Material mat);
+    MeshRenderer(Mesh mesh, SEngine::Material mat);
     
 private:
-    Material p_material;
+    SEngine::Material p_material;
 };
 
 
 
 class Entity{
 public:
-    Entity(Mesh mesh, Transform transform, Material material, const char* name);
+    Entity(Mesh mesh, Transform transform, SEngine::Material material, const char* name);
     MeshRenderer renderer;
     Transform transform;
     Mesh mesh;
-    Material material;
+    SEngine::Material material;
     const char* name;
 };
 }

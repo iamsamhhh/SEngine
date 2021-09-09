@@ -1,6 +1,6 @@
 //
 //  Shader.h
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by 谌宇轩 Sam on 2021/8/28.
 //
@@ -15,6 +15,7 @@
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>
 //#include <glm/gtc/type_ptr.hpp>
+namespace SEngine {
 class Shader{
 public:
     unsigned int ID;
@@ -158,5 +159,5 @@ public:
 //        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
 //    }
 };
-
+}
 #endif /* Shader_h */

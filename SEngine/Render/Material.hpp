@@ -1,6 +1,6 @@
 //
 //  Material.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/9/7.
 //
@@ -31,4 +31,4 @@ private:
 
 }
 
-#endif /* Material_hpp */
+#endif /* Material_SEngine::SEngine::Material:MaterialSEngine::MaterialSEngine::Material*/

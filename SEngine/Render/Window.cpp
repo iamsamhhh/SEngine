@@ -1,12 +1,12 @@
 //
 //  Window.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/22.
 //
 
 #include "Window.hpp"
-namespace SEngine {
+namespace SEngine_Internal {
 bool Window::init = false;
 
 Window::Window(unsigned int width, unsigned int height, const char* title){

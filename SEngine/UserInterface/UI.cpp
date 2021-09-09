@@ -1,12 +1,12 @@
 //
 //  UI.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/23.
 //
 
 #include "UI.hpp"
-namespace SEngine{
+namespace SEngine_Internal{
 bool UI::initialized = false;
 
 UI::UI(GLFWwindow* window){

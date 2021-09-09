@@ -1,6 +1,6 @@
 //
 //  Events.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/8/28.
 //
@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 
-namespace SEngine {
+namespace SEngine_Internal {
 #define MAX_EVENT_COUNT 20
 enum EventType{
     OnMouseDown

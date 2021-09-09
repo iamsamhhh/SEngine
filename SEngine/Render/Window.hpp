@@ -1,6 +1,6 @@
 //
 //  Window.hpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by henry on 2021/8/22.
 //
@@ -13,7 +13,7 @@
 #include <GLFW/glfw3.h>
 #include "UI.hpp"
 
-namespace SEngine{
+namespace SEngine_Internal{
 
 // a window class manage all things about windows
 class Window{

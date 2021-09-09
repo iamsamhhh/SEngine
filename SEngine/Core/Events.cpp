@@ -1,12 +1,12 @@
 //
 //  Events.cpp
-//  SEngine
+//  SEngine_Internal
 //
 //  Created by Sam cyx on 2021/8/28.
 //
 
 #include "Events.hpp"
-namespace SEngine{
+namespace SEngine_Internal{
 
 Events::Events(EventType type){
     m_type = type;
