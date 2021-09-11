@@ -12,7 +12,7 @@
 #include "Material.hpp"
 #include "Shader.h"
 
-#define MAX_NUM_OF_VERTICES_PER_SHADER 243
+#define MAX_NUM_OF_VERTICES_PER_SHADER 2187
 
 namespace SEngine_Internal {
 
@@ -21,8 +21,8 @@ public:
     static void CreatTri(float vertices[9], SEngine::Material material);
     static void CreatQuad(float vertices[12], SEngine::Material material);
     static void DrawAll();
-    static void Clear(){
-        glClearColor(0.5, 0.5, 0.5, 1.0);
+    static void Clear(float r, float g, float b, float a){
+        glClearColor(r, g, b, a);
         glClear(GL_COLOR_BUFFER_BIT);
     }
 private:

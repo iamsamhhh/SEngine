@@ -10,7 +10,7 @@
 
 #include "Shader.h"
 
-#define MAX_NUM_OF_MATERIAL 4
+#define MAX_NUM_OF_MATERIAL 50
 #define DEFAULT_SHADER_PATH_V "/Users/samcyx/dev/SEngine/SEngine/shaders/OneColor.vs"
 #define DEFAULT_SHADER_PATH_F "/Users/samcyx/dev/SEngine/SEngine/shaders/OneColor.fs"
 
@@ -28,17 +28,18 @@ public:
     Material(SetUniformFunc func);
     Material();
     void Use();
-    static void GenerateDefaultShader();
+    static void GenerateDefaults();
     
     Shader shader;
     SetUniformFunc func;
+    static Material defaultMat;
     unsigned int ID;
-    
+    static GLuint count;
 private:
-    static bool defaultShaderGen;
+    
+    static bool defaultsGenerated;
     static Shader defaultShader;
     static SetUniformFunc defaultFunc;
-    static GLuint count;
 };
 
 }

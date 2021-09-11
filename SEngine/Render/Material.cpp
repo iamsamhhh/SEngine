@@ -17,7 +17,8 @@ namespace SEngine{
 GLuint Material::count = 0;
 Shader Material::defaultShader = Shader();
 SetUniformFunc Material::defaultFunc = SEngine_Internal::WhiteColor;
-bool Material::defaultShaderGen = false;
+Material Material::defaultMat = Material();
+bool Material::defaultsGenerated = false;
 
 Material::Material(const char* vertexShaderPath, const char* fragmentShaderPath, SetUniformFunc func) : shader(vertexShaderPath, fragmentShaderPath), ID(count), func(func)
 {
@@ -35,16 +36,15 @@ Material::Material(Shader shader, SetUniformFunc func) : shader(shader), func(fu
 
 Material::Material(SEngine::SetUniformFunc func) : shader(Material::defaultShader), func(func)
 {
+    printf("hello\n");
     if (count != MAX_NUM_OF_MATERIAL - 1) {
         count++;
     }
 }
 
-Material::Material() : shader(Material::defaultShader), func(Material::defaultFunc)
+Material::Material() : shader(), func()
 {
-    if (count != MAX_NUM_OF_MATERIAL - 1) {
-        count++;
-    }
+    
 }
 
 
@@ -54,11 +54,12 @@ void Material::Use(){
     
 }
 
-void Material::GenerateDefaultShader() {
-    if (Material::defaultShaderGen) return;
+void Material::GenerateDefaults() {
+    if (Material::defaultsGenerated) return;
     
     Material::defaultShader = Shader(DEFAULT_SHADER_PATH_V, DEFAULT_SHADER_PATH_F);
-    Material::defaultShaderGen = true;
+    Material::defaultsGenerated = true;
+    Material::defaultMat = Material(defaultShader, defaultFunc);
 }
 
 }

@@ -38,7 +38,7 @@ void Render2D::CreatTri(float vertices[9], SEngine::Material material){
 }
 
 void Render2D::DrawAll(){
-    for (int i = 0; i < MAX_NUM_OF_MATERIAL; i++) {
+    for (int i = 0; i < SEngine::Material::count; i++) {
         GLuint VAO, VBO;
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
@@ -48,10 +48,8 @@ void Render2D::DrawAll(){
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
         glEnableVertexAttribArray(0);
         glBindVertexArray(VAO);
-        for (int j = 0; j < MAX_NUM_OF_VERTICES_PER_SHADER; j+=3) {
-            materials[i].Use();
-            glDrawArrays(GL_TRIANGLES, j, 3);
-        }
+        materials[i].Use();
+        glDrawArrays(GL_TRIANGLES, 0, Render2D::count);
     }
 }
 

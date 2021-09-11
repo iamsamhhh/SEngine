@@ -8,7 +8,6 @@
 #ifndef Entity_hpp
 #define Entity_hpp
 
-#include "Core.h"
 #include "Render2D.hpp"
 
 #define MAX_NUM_OF_VERTEX_IN_ONE_MESH 123
@@ -16,15 +15,13 @@ namespace SEngine{
 class Transform{
 public:
     Transform();
-    Vector3 position;
-    Vector3 scale;
-    Vector3 rotation;
 private:
    
 };
 
 
 enum EMeshType{
+    empty,
     quad,
     triangle,
     custom
@@ -33,6 +30,7 @@ enum EMeshType{
 class Mesh{
 public:
     Mesh(float *vertexData, GLuint *indices, EMeshType type);
+    Mesh();
     static Mesh mesh_triangle;
     static Mesh mesh_quad;
     EMeshType meshType;
@@ -44,15 +42,17 @@ private:
 class MeshRenderer{
 public:
     MeshRenderer(Mesh mesh, SEngine::Material mat);
-    
+    MeshRenderer();
 private:
     SEngine::Material p_material;
+    Mesh p_mesh;
 };
 
 
 
 class Entity{
 public:
+    Entity(const char* name);
     Entity(Mesh mesh, Transform transform, SEngine::Material material, const char* name);
     MeshRenderer renderer;
     Transform transform;

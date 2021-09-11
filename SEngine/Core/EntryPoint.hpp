@@ -12,5 +12,6 @@
 #include "Application.hpp"
 #include "Render2D.hpp"
 #include "Core.h"
+#include "Entity.hpp"
 
 #endif /* EntryPoint_hpp */

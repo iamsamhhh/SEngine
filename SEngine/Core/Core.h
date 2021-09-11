@@ -14,8 +14,6 @@
 #include "Window.hpp"
 #include "Events.hpp"
 #include "Vectors.hpp"
-
-#define MAX_NUM_OF_VERTICS_TO_DRAW 2048
 //float verticesData[3 * MAX_NUM_OF_VERTICS_TO_DRAW]={
 //
 //};

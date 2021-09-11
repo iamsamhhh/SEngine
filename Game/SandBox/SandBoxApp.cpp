@@ -7,15 +7,18 @@
 
 #include "SandBoxApp.hpp"
 
+float vertices_tri[] = {
+    0.0,  0.9, 0.0,
+    -0.5,  0.5, 0.0,
+     0.5, 0.5, 0.0,
+};
+//void SetUniformForTri(Shader* shader){
+//    shader->setVec3("color", 0.2, 0.5, 0.3);
+//}
+//void SetUniformForQuad(Shader* shader){
+//    shader->setVec3("color", 0.5, 0.4, 0.3);
+//}
 
-void SetUniformForTri(Shader* shader){
-//    shader->setVec3("position", 0, 0, 0);
-    shader->setVec3("color", 0.2, 0.5, 0.3);
-}
-void SetUniformForQuad(Shader* shader){
-//    shader->setVec3("position", 0, 0, 0);
-    shader->setVec3("color", 0.5, 0.4, 0.3);
-}
 SandBox::SandBox(){
     
     SandBox::logger = new Logger("SandBox");
@@ -23,11 +26,11 @@ SandBox::SandBox(){
     scrHeight = 800;
     scrWidth = 1300;
     
-    SEngine::Material matForQuad = SEngine::Material();
-    Entity quad = Entity(Mesh::mesh_quad, Transform(), matForQuad, "quad");
+//    Material matForQuad = Material(SetUniformForTri);
+//    Material matForTri = Material(SetUniformForQuad);
     
-    SEngine::Material matForTri = SEngine::Material(SetUniformForQuad);
-    Entity tri = Entity(Mesh::mesh_triangle, Transform(), matForTri, "tri");
+//    Entity(Mesh::mesh_quad, Transform(), matForQuad, "quad");
+//    Entity(Mesh(vertices_tri, nullptr, triangle), Transform(), matForTri, "tri");
     
 }
 
